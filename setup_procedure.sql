@@ -1,7 +1,6 @@
 Use CoronaVirus
 GO
 
-InitScheduerApp
 
 
 IF OBJECT_ID ( 'InitScheduerApp', 'P' ) IS NOT NULL
@@ -43,6 +42,8 @@ Create Table AppointmentStatusCodes(
 	StatusCode   varchar(30)
 );
 
+EXEC InitScheduerApp
+GO
 
 INSERT INTO AppointmentStatusCodes (statusCodeId, StatusCode)
 	VALUES (0, 'Open');
